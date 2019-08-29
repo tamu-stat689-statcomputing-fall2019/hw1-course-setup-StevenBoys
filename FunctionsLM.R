@@ -25,6 +25,8 @@ calculateBeta <- function(X, Y){
 
 # Calculate MSE
 calculateMSE <- function(beta, beta_LS){
+  # calculate MSE between the true beta and the one estimated
+  MSE <- as.numeric(crossprod(beta-beta_LS))
   
   # Return MSE - error ||beta - beta_LS||_2^2
   return(MSE)
